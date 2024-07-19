@@ -1,0 +1,17 @@
+
+1) open ST visual developer
+2) click  file , click new work space for new program or open work space for old project
+3) enter new project name and browse to required location to populate the project
+4) enter program name , select ST assembler and linker
+5) enter chip number from list of chips available
+6) once STVD opens , right click on source file folder and select add new files option
+7) browse to the folder where include files are, usually in programs/ST/asm/include folder,
+8) select stm8s103f3p.asm and stm8s103f3p.inc files and enter open to copy files to source folder
+9) click on main.asm file in source folder to open it
+10) STVD already creates the stack and clears the RAM, vector tale is added
+11) add line ,#include "stm8s103f.inc", under the existing #include "mapping.inc" line.
+12) any macros can be placed under the include files area
+13) add directive ,segment byte at 100 'ram1', under the macro area for RAM based variables
+14) if needed any variables acn be declared under the above directive
+15) Any main code will be placed under infinite loop label
+16) press build all to compile program 
